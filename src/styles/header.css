@@ -1,5 +1,14 @@
 header {
   background-color: #204060;
   color: white;
-  text-align: center
+  height: 4em;
+  line-height: 4em;
+  padding: 0 2em
+}
+
+h1 {
+  font-size: 2em;
+  font-weight:700;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }

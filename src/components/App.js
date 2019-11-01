@@ -1,43 +1,20 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import UrlInput from './UrlInput';
+import Main from './containers/Main';
 
 export default function App() {
   return (
     <>
       <Header />
       <main>
-        
         <section>
           <form>
             <section>
-              <UrlInput />
-              <div id="methods">
-                <label>
-                  <input type="radio" name="method" value="get"/> 
-                  <span>GET</span>
-                </label>
-                <label>
-                  <input type="radio" name="method" value="post"/> 
-                  <span>POST</span>
-                </label>
-                <label>
-                  <input type="radio" name="method" value="put"/> 
-                  <span>PUT</span>
-                </label>
-                <label>
-                  <input type="radio" name="method" value="patch"/> 
-                  <span>PATCH</span>
-                </label>
-                <label>
-                  <input type="radio" name="method" value="delete"/> 
-                  <span>DELETE</span>
-                </label>
-                <label>
-                  <button type="submit">GO!</button>
-                </label>
-              </div>
+              <Main />
+              <label>
+                <button type="submit">GO!</button>
+              </label>
             </section>
           </form>
           <div id="json">

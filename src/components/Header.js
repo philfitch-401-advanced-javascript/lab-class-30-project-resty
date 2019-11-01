@@ -4,7 +4,7 @@ import '../styles/header.css';
 const Header = () => {
   return (
     <header>
-      RESTfully
+      <h1>RESTfully</h1>
     </header>
   );
 };
