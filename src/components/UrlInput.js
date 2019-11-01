@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const UrlInput = () => {
+const UrlInput = (handleUrlChange) => {
   return (
-    <input type="text" className="wide" name="url" placeholder="URL" value="" />
+    <input 
+      type="text" 
+      className="wide" 
+      name="url" 
+      placeholder="URL" 
+      value=""
+      onChange={handleUrlChange} />
   );
 };
 
