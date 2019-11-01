@@ -1,20 +1,18 @@
 import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import UrlInput from './UrlInput';
 
 export default function App() {
   return (
     <>
-      <header>
-        RESTy
-      </header>
+      <Header />
       <main>
-        <aside>
-          <h2>History</h2>
-          <ul id="history"></ul>
-        </aside>
+        
         <section>
           <form>
             <section>
-              <input type="text" className="wide" name="url" placeholder="URL" value/>
+              <UrlInput />
               <div id="methods">
                 <label>
                   <input type="radio" name="method" value="get"/> 
@@ -56,11 +54,7 @@ export default function App() {
           </div>
         </section>
       </main>
-      <footer>
-        <section>
-          <p>&copy;2019 Dylan/Phil</p>
-        </section>
-      </footer>
+      <Footer />
     </>
   );
 }
