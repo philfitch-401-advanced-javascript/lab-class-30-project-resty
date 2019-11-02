@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+// import  '../../styles/method.css';
 
 export default class Method extends Component {
   static propTypes = {
@@ -12,10 +13,12 @@ export default class Method extends Component {
       <>
         <input 
           type="radio" 
-          name="method" 
+          className="method" 
           value=""
-          onClick={handleMethodChange} />
-        
+          onClick={handleMethodChange}
+          style={{ display: 'none' }} 
+        />
+          
       </>
     );
   }
