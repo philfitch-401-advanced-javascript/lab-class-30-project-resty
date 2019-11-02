@@ -9,14 +9,12 @@ export default function App() {
       <Header />
       <main>
         <section>
-          <form>
-            <section>
-              <Main />
-              <label>
-                <button type="submit">GO!</button>
-              </label>
-            </section>
-          </form>
+          
+          <Main />
+          <label>
+            <button type="submit">GO!</button>
+          </label>
+          
           <div id="json">
             <div className="react-json-view">
               <div className="pretty-json-container object-container">

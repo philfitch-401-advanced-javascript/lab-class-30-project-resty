@@ -21,19 +21,19 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <section>
-          <UrlInputForm />
+        <form>
+          <UrlInputForm handleUrlChange={this.handleUrlChange} />
           <div id="methods">
-            <Method value={'get'} checked />
+            <Method value={'get'} handleMethodChange={this.handleMethodChange} checked />
             <span>GET</span>
-            <Method value={'post'} />
+            <Method value={'post'} handleMethodChange={this.handleMethodChange} />
             <span>POST</span>
-            <Method value={'put'} />
+            <Method value={'put'} handleMethodChange={this.handleMethodChange} />
             <span>PUT</span>
-            <Method value={'delete'} />
+            <Method value={'delete'} handleMethodChange={this.handleMethodChange} />
             <span>DELETE</span>
           </div>
-        </section>
+        </form>
       </>
     );
   }

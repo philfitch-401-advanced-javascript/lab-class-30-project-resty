@@ -7,14 +7,14 @@ export default class UrlInputForm extends Component {
   }
 
   render() {
-    const handleUrlChange = this.props;
+    const { handleUrlChange } = this.props;
     return (
       <input 
         type="text" 
         className="wide" 
         name="url" 
         placeholder="URL" 
-        value=""
+        defaultValue=""
         onChange={handleUrlChange} />
     );
   }

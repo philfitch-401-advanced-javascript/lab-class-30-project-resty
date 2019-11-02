@@ -7,7 +7,7 @@ export default class Method extends Component {
   }
 
   render() {
-    const handleMethodChange = this.props;
+    const { handleMethodChange } = this.props;
     return (
       <>
         <input 
