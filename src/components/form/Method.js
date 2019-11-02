@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import  '../../styles/method.css';
 
 export default class Method extends Component {
   static propTypes = {
