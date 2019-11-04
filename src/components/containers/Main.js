@@ -24,14 +24,14 @@ export default class Main extends Component {
         <form>
           <UrlInputForm handleUrlChange={this.handleUrlChange} />
           <div id="methods">
-            <Method value={'get'} handleMethodChange={this.handleMethodChange} checked />
-            <span>GET</span>
-            <Method value={'post'} handleMethodChange={this.handleMethodChange} />
-            <span>POST</span>
-            <Method value={'put'} handleMethodChange={this.handleMethodChange} />
-            <span>PUT</span>
-            <Method value={'delete'} handleMethodChange={this.handleMethodChange} />
-            <span>DELETE</span>
+            
+            <label for="get"><Method id={'get'} handleMethodChange={this.handleMethodChange} checked="checked" />GET</label>
+            
+            <label for="post"><Method id={'post'} handleMethodChange={this.handleMethodChange} />POST</label>
+            
+            <label for="put"><Method id={'put'} handleMethodChange={this.handleMethodChange} />PUT</label>
+            
+            <label for="delete"><Method id={'delete'} handleMethodChange={this.handleMethodChange} />DELETE</label>
           </div>
         </form>
       </>

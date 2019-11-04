@@ -1,0 +1,14 @@
+.method :hover {
+  cursor: pointer;
+}
+
+.method :checked {
+  background-color: #204060;
+  color:  white
+}
+
+.method {
+  visibility: hidden;
+  width: 0;
+  height: 0
+}
