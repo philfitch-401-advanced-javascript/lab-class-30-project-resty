@@ -1,7 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<h1>
-  Hello World
-</h1>
+<Fragment>
+  <Header />
+  <main>
+    <section>
+      <Main />
+      <label>
+        <button
+          type="submit"
+        >
+          GO!
+        </button>
+      </label>
+      <div
+        id="json"
+      >
+        <div
+          className="react-json-view"
+        >
+          <div
+            className="pretty-json-container object-container"
+          >
+            <div
+              className="object-content"
+            >
+              <div
+                className="object-key-val"
+              >
+                <span />
+                <span />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Fragment>
 `;
