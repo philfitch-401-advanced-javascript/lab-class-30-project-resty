@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
 import UrlInputForm from '../form/UrlInputForm';
-import Method from '../form/Method';
+import Results from '../Results';
+import apiCall from '../../services/apiCall';
 
 export default class Main extends Component {
 
   state = {
     urlInput: '',
-    method: 'get'
+    method: 'get',
+    inputJson: '',
+    resultsJson: ''
   };
 
   handleUrlChange = ({ target }) => {
@@ -15,25 +18,32 @@ export default class Main extends Component {
   }
 
   handleMethodChange = ({ target }) => {
-    this.setState({ methodInput: target.value });
+    this.setState({ method: target.value });
+  }
+
+  handleInputJsonChange = ({ target }) => {
+    this.setState({ inputJson: target.value });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    apiCall(this.state.urlInput)
+      .then(json => {
+        this.setState({ resultsJson: JSON.stringify(json) });
+      });
   }
 
   render() {
     return (
       <>
-        <form>
-          <UrlInputForm handleUrlChange={this.handleUrlChange} />
-          <div id="methods">
-            
-            <label for="get"><Method id={'get'} handleMethodChange={this.handleMethodChange} checked="checked" />GET</label>
-            
-            <label for="post"><Method id={'post'} handleMethodChange={this.handleMethodChange} />POST</label>
-            
-            <label for="put"><Method id={'put'} handleMethodChange={this.handleMethodChange} />PUT</label>
-            
-            <label for="delete"><Method id={'delete'} handleMethodChange={this.handleMethodChange} />DELETE</label>
-          </div>
-        </form>
+        <UrlInputForm 
+          handleUrlChange={this.handleUrlChange}   //function for updating url input in state
+          handleMethodChange={this.handleMethodChange}
+          handleInputJsonChange={this.handleInputJsonChange}
+          handleSubmit={this.handleSubmit}
+        />
+
+        <Results json={this.state.resultsJson} />
       </>
     );
   }
