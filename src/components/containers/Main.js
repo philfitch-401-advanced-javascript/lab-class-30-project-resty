@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
 import UrlInputForm from '../form/UrlInputForm';
-import Method from '../form/Method';
+import apiCall from '../services/apiCall';
+import Results from '../Results';
 
 export default class Main extends Component {
 
   state = {
     urlInput: '',
-    method: 'get'
+    method: 'get',
+    inputJson: '',
+    outputJson: ''
   };
 
   handleUrlChange = ({ target }) => {
@@ -15,25 +18,29 @@ export default class Main extends Component {
   }
 
   handleMethodChange = ({ target }) => {
-    this.setState({ methodInput: target.value });
+    this.setState({ method: target.value });
+  }
+
+  handleInputJsonChange = ({ target }) => {
+    this.setState({ inputJson: target.value });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault;
+    apiCall(this.state.urlInput, this.state.method);
   }
 
   render() {
     return (
       <>
-        <form>
-          <UrlInputForm handleUrlChange={this.handleUrlChange} />
-          <div id="methods">
-            
-            <label for="get"><Method id={'get'} handleMethodChange={this.handleMethodChange} checked="checked" />GET</label>
-            
-            <label for="post"><Method id={'post'} handleMethodChange={this.handleMethodChange} />POST</label>
-            
-            <label for="put"><Method id={'put'} handleMethodChange={this.handleMethodChange} />PUT</label>
-            
-            <label for="delete"><Method id={'delete'} handleMethodChange={this.handleMethodChange} />DELETE</label>
-          </div>
-        </form>
+        <UrlInputForm 
+          handleUrlChange={this.handleUrlChange} 
+          handleMethodChange={this.handleMethodChange} 
+          handleInputJsonChange={this.handleInputJsonChange} 
+          handleOutputJsonChange={this.handleOutputJsonChange}
+          handleSubmit={this.handleSubmit} 
+        />
+        <Results json={this.state.outputJson}/>
       </>
     );
   }
