@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropType from 'prop-types';
 import UrlInputForm from '../form/UrlInputForm';
 import Results from '../Results';
 import apiCall from '../../services/apiCall';

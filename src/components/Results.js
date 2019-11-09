@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Results = ({ json }) => {
   return (
     <>
-      <h1>SO MANY RESULTS</h1>
+      <h1>RESULTS</h1>
       <pre>{json}</pre>
     </>
   );
@@ -12,6 +12,6 @@ const Results = ({ json }) => {
 
 Results.propTypes = {
   json: PropTypes.string
-}
+};
 
 export default Results;
