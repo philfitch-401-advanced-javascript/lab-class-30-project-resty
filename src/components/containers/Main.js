@@ -27,7 +27,7 @@ export default class Main extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    apiCall(this.state.urlInput)
+    apiCall(this.state.urlInput, this.state.method, this.state.inputJson)
       .then(json => {
         this.setState({ resultsJson: JSON.stringify(json) });
       });

@@ -11,7 +11,6 @@ const UrlInputForm = ({ handleUrlChange, handleMethodChange, handleInputJsonChan
         <input type='radio' name='method' value='get' onChange={handleMethodChange} /> GET
         <input type='radio' name='method' value='post' onChange={handleMethodChange} /> POST
         <input type='radio' name='method' value='put' onChange={handleMethodChange} /> PUT
-        <input type='radio' name='method' value='patch' onChange={handleMethodChange} /> PATCH
         <input type='radio' name='method' value='delete' onChange={handleMethodChange} /> DELETE
         <textarea placeholder='json' onChange={handleInputJsonChange} />
         <button>Submit</button>
