@@ -39,9 +39,7 @@ export default class Main extends Component {
           handleUrlChange={this.handleUrlChange}   //function for updating url input in state
           handleMethodChange={this.handleMethodChange}
           handleInputJsonChange={this.handleInputJsonChange}
-          handleSubmit={this.handleSubmit}
-        />
-
+          handleSubmit={this.handleSubmit} />
         <Results json={this.state.resultsJson} />
       </>
     );

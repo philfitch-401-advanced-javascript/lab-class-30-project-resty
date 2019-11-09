@@ -2,9 +2,9 @@
 
 exports[`Results component renders Results 1`] = `
 <Fragment>
-  <h1>
+  <h2>
     RESULTS
-  </h1>
+  </h2>
   <pre />
 </Fragment>
 `;
